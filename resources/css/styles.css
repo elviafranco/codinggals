@@ -1,0 +1,264 @@
+/* Use ems or rems to cize and position page elements + incorporate media queries to resize elements based on the size of the screen */
+
+/* Universal */
+
+html, body {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+h3 {
+    margin: 0;
+}
+
+p {
+    line-height: 1.9;
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+/* Header */
+header {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    /* flex-flow: row wrap; */
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    color: #d90091;
+}
+
+nav #logo {
+    font-family: 'Monoton', cursive;
+    font-size: 1.25rem;
+    color: #d90091;
+    /* color: pink; */
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+    padding: 1rem;
+}
+
+/* Main */
+
+.jumbotron {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+    background-image:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 0, 217, 0.5)),
+    url('../images/markus-spiske-MgtHZ4zlC1U-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#jumbo-content {
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px); 
+    color: white;
+    padding: 2rem 4rem;
+    width: 100%;
+}
+
+input, button {
+    border: none;
+    outline: none;
+    background-color: white;
+    padding: 0.6rem 1rem;
+    border: 2px solid #d90091;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    /* font-weight: 500; */
+    transition: all .5s ease;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: #d90091;
+    color: white;
+}
+
+/* Section - About */ 
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 5%;
+}
+
+.child-img, .child-content {
+    width: 50%;
+    height: 30rem;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.child-content {
+    margin-left: 1rem;
+}
+
+.child-content p {
+    /* padding: 1rem; */
+    text-align: justify;
+    margin: 0;
+}
+
+.child-img {
+    border-radius: 1rem;
+}
+
+.child-img img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media only screen and (max-width: 768px) {
+    .about-container {
+        flex-flow: column wrap;
+    }
+
+    .child-img, .child-content {
+        width: 100%;
+        height: 25rem;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+}
+
+/* Join */
+#join {
+    background-image:
+    linear-gradient(.25turn, rgba(255, 81, 229, 0.5), 80%, rgba(255, 0, 255, 0.5));
+}
+
+.join-container {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 20rem;
+}
+
+
+#cta {
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    color: black;
+    padding: 2rem 4rem;
+    border-radius: 1rem;
+}
+
+/* Contact */
+
+/* .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    margin: 2rem 1rem;
+} */
+
+.grid-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 4rem 5%;
+}
+
+#socials {
+    padding-left: 0;
+}
+
+.grid-child {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border: 6px solid white;
+}
+
+.grid-child img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .grid-container {
+        flex-flow: wrap;
+    }
+
+    .grid-child {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    background-image:
+    linear-gradient(.25turn, rgba(255, 81, 229, 0.5), 80%, rgba(255, 0, 255, 0.5));
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 4rem; 
+}
+
+span {
+    font-weight: 300;
+}
+
+ul a {
+    color: black;
+    font-size: 1.25rem;
+}
+
+ul a:hover {
+    color: #d90091; 
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+    padding: 1rem;
+}
